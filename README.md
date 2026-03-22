@@ -5,6 +5,7 @@
 ![Made with love](https://img.shields.io/badge/made%20with-love-red?style=for-the-badge)
 
 
+## _This repository is actively maintained and structured for serious AI/ML interview preparation_
 
 # AI/ML Interview Preparation
 
