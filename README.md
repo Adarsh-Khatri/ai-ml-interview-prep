@@ -1,3 +1,11 @@
+![GitHub stars](https://img.shields.io/github/stars/Adarsh-Khatri/ai-ml-interview-prep?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/Adarsh-Khatri/ai-ml-interview-prep?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/Adarsh-Khatri/ai-ml-interview-prep?style=for-the-badge)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?style=for-the-badge)
+![Made with love](https://img.shields.io/badge/made%20with-love-red?style=for-the-badge)
+
+
+
 # AI/ML Interview Preparation
 
 This repository is something I started while preparing for AI/ML interviews.
