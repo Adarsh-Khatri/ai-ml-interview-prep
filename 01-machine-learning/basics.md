@@ -113,3 +113,95 @@ Overfitting is when a model memorizes training data (including noise) instead of
 ---
 ---
 ---
+
+# 3. **What is Underfitting?**
+
+---
+
+**Definition:**
+Underfitting occurs when a machine learning model is too simple to capture the underlying patterns in the data, resulting in poor performance on both training data and unseen data.
+
+---
+
+### **Intuition:**
+
+Imagine again you’re preparing for an exam:
+
+* **Good learning:** You understand concepts → solve most questions
+* **Overfitting:** You memorize → fail on new questions
+* **Underfitting:** You didn’t study properly → you fail even the basic questions
+
+The model is not even able to learn the training data properly.
+
+---
+
+### **Why Underfitting Happens**
+
+1. **Model is Too Simple**
+
+    * Linear model for complex non-linear data
+    * Very shallow neural network
+
+2. **Insufficient Training**
+
+    * Model hasn’t learned enough patterns yet
+    * Training stopped too early
+
+3. **Too Much Regularization**
+
+    * Over-penalizing the model
+    * Forces weights to be too small
+
+4. **Poor Feature Selection**
+
+    * Important features missing
+    * Data representation is weak
+
+---
+
+### **Bias-Variance View**
+
+Underfitting = **High Bias + Low Variance**
+
+* **High Bias:** Model makes strong assumptions → misses patterns
+* **Low Variance:** Predictions don’t change much → but they are wrong
+
+---
+
+### **How to Detect Underfitting**
+
+1. **Training vs Validation Performance**
+
+    * Training accuracy → Low
+    * Validation accuracy → Also Low
+
+Both are bad → clear sign
+
+---
+
+### **How to Fix Underfitting**
+
+1. **Use a More Complex Model**
+
+    * Move from Linear → Polynomial / Neural Network
+    * Increase layers / neurons
+
+2. **Train Longer**
+    
+    * Increase epochs
+    * Allow model to learn patterns
+
+3. **Reduce Regularization**
+
+    * Lower L1 / L2 penalty
+    * Reduce dropout
+
+4. **Better Features**
+
+    * Feature engineering
+    * Add meaningful input variables
+
+---
+
+### **One-Line Revision:**
+Underfitting is when a model is too simple to learn patterns from data, leading to poor performance on both training and test data.
