@@ -203,5 +203,129 @@ Both are bad → clear sign
 
 ---
 
-### **One-Line Revision:**
+### **One-Line Revision**
 Underfitting is when a model is too simple to learn patterns from data, leading to poor performance on both training and test data.
+
+---
+---
+---
+
+# 4. Bias vs Variance and the Tradeoff
+
+---
+
+## **What is Bias?**
+
+**Definition:**
+Bias is the error caused by overly simplistic assumptions in the model.
+
+---
+
+### **Intuition**
+
+Bias is like having a **fixed mindset**:
+
+* The model assumes a simple pattern
+* Ignores complexity in data
+
+Result: It **misses important relationships**
+
+---
+
+### **Example**
+
+Trying to fit a **straight line** to curved data.
+
+---
+
+### **Key Point**
+
+* High Bias → **Underfitting**
+* Model is too simple
+
+---
+
+## **What is Variance?**
+
+**Definition:**
+Variance is the error caused by the model being too sensitive to small changes in the training data.
+
+---
+
+### **Intuition**
+
+Variance is like being **over-sensitive**:
+
+* Learns every tiny detail (even noise)
+* Changes drastically with new data
+
+Result: Poor generalization
+
+---
+
+### **Example**
+
+A very complex curve passing through every data point.
+
+---
+
+### **Key Point**
+
+* High Variance → **Overfitting**
+* Model memorizes data
+
+---
+
+## **Bias–Variance Tradeoff (The Core)**
+
+---
+
+### **Meaning**
+
+You cannot minimize both bias and variance at the same time.
+
+> When you decrease one → the other tends to increase.
+
+---
+
+## **Understanding the Tradeoff**
+
+| Model Complexity | Bias     | Variance | Result       |
+| ---------------- | -------- | -------- | ------------ |
+| Very Simple      | High     | Low      | Underfitting |
+| Moderate         | Balanced | Balanced | ✅ Best Model |
+| Very Complex     | Low      | High     | Overfitting  |
+
+The goal is to find:
+
+> **Optimal model complexity where both bias and variance are balanced**
+
+At this point:
+
+* Validation error is minimum
+* Model generalizes well
+
+---
+
+## **How to Control Bias and Variance**
+
+### **To Reduce Bias (Fix Underfitting)**
+
+* Use a more complex model
+* Add more relevant features
+* Train for longer
+
+---
+
+### **To Reduce Variance (Fix Overfitting)**
+
+* Collect more data
+* Apply regularization (L1 / L2, Dropout)
+* Use a simpler model
+* Apply cross-validation
+
+---
+
+## **One-Line Revision**
+
+Bias is error due to simplicity, variance is error due to sensitivity, and the tradeoff is finding the right balance between them.
