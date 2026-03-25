@@ -329,3 +329,105 @@ At this point:
 ## **One-Line Revision**
 
 Bias is error due to simplicity, variance is error due to sensitivity, and the tradeoff is finding the right balance between them.
+
+---
+---
+---
+
+# 5. What is a Dataset?
+
+---
+
+## **Definition**
+
+A dataset is a collection of data points (samples) used to train, validate, and test a machine learning model.
+
+---
+
+## **Intuition**
+
+Think of a dataset as your **study material**
+
+* The model learns from this data
+* The quality of learning depends on this data
+
+Better data → Better model
+
+---
+
+## **Basic Structure of a Dataset**
+
+A dataset typically consists of:
+
+### **1. Features (Input Variables)**
+
+* Inputs to the model
+* Also called **independent variables**
+
+**Examples:**
+
+* Area of house
+* Number of rooms
+* Location
+
+---
+
+### **2. Labels (Target / Output)**
+
+* The value we want to predict
+* Also called **dependent variable**
+
+**Example:**
+
+* House price
+
+---
+
+## **Types of Datasets**
+
+### **1. Training Dataset**
+
+* Used to train the model
+* Model learns patterns from this data
+
+---
+
+### **2. Validation Dataset**
+
+* Used to tune hyperparameters
+* Helps detect overfitting
+
+---
+
+### **3. Test Dataset**
+
+* Used to evaluate final performance
+* Never seen during training
+
+---
+
+## **Types Based on Data Format**
+
+### **1. Structured Data**
+
+* Organized in tables
+* Example: CSV, Excel
+
+---
+
+### **2. Unstructured Data**
+
+* No fixed format
+* Example: Images, videos, text
+
+---
+
+### **3. Semi-Structured Data**
+
+* Partially organized
+* Example: JSON, XML
+
+---
+
+## **One-Line Revision**
+A dataset is a collection of input-output data used to train and evaluate a machine learning model.
