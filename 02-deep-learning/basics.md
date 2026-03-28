@@ -108,3 +108,170 @@ More layers enable learning of **complex patterns**
 
 ## **One-Line Revision**
 Deep Learning is a type of machine learning that uses multi-layer neural networks to automatically learn complex patterns from data.
+
+---
+---
+---
+
+
+# 2. What is Convolutional Neural Networks (CNN)
+
+---
+
+## **1. Overview**
+
+A Convolutional Neural Network (CNN) is a deep learning architecture designed to process data with **grid-like structure** (e.g., images), using convolution operations to efficiently learn spatial hierarchies.
+
+---
+
+## **2. Why CNN Instead of Fully Connected Networks?**
+
+### **Problem with Fully Connected Layers**
+
+* For an image of size (224 \times 224 \times 3):
+
+  * Parameters become extremely large
+  * No spatial structure is preserved
+
+---
+
+### **CNN Solution**
+
+* **Local Connectivity** → Focus on small regions
+* **Parameter Sharing** → Same filter reused
+* **Spatial Awareness** → Preserves image structure
+
+---
+
+## **3. Mathematical Formulation**
+
+### **Convolution Operation**
+
+Y(i,j) = \sum_m \sum_n X(i+m, j+n) \cdot W(m,n)
+
+* (X): Input
+* (W): Kernel (filter)
+* (Y): Output feature map
+
+---
+
+## **4. Tensor Representation**
+
+* **Input:**
+  (X \in \mathbb{R}^{H \times W \times C})
+
+* **Kernel:**
+  (W \in \mathbb{R}^{k \times k \times C})
+
+* **Output:**
+  (Y \in \mathbb{R}^{H' \times W' \times F})
+
+---
+
+## **5. Output Size Calculation**
+
+\frac{N - F + 2P}{S} + 1
+
+Where:
+
+* (N): Input size
+* (F): Filter size
+* (P): Padding
+* (S): Stride
+
+---
+
+## **6. CNN Building Blocks**
+
+### **6.1 Convolution Layer**
+
+* Applies filters to extract features
+* Each filter detects specific patterns
+
+$$
+Y_f = X * W_f + b_f
+$$
+
+---
+
+### **6.2 Activation (ReLU)**
+
+f(x) = \max(0, x)
+
+* Introduces non-linearity
+* Prevents linear model collapse
+
+---
+
+### **6.3 Pooling Layer**
+
+* Reduces spatial dimensions
+* Keeps important information
+
+**Max Pooling:**
+
+y = \max(x_{ij})
+
+---
+
+### **6.4 Fully Connected Layer**
+
+* Flattens features
+* Performs classification
+
+---
+
+## **7. Hierarchical Feature Learning**
+
+| Layer Depth | Features Learned   |
+| ----------- | ------------------ |
+| Shallow     | Edges, gradients   |
+| Mid-level   | Textures, patterns |
+| Deep        | Objects, semantics |
+
+---
+
+## **8. Important Variants**
+
+### **Strided Convolution**
+
+* Downsampling via stride
+
+### **Dilated Convolution**
+
+* Larger receptive field without more parameters
+
+### **Batch Normalization**
+
+* Stabilizes training
+
+### **Dropout**
+
+* Prevents overfitting
+
+---
+
+## **9. Popular Architectures**
+
+* **LeNet** → Early CNN
+* **AlexNet** → Breakthrough model
+* **VGG** → Deep architecture
+* **ResNet** → Skip connections (very important)
+
+---
+
+## **10. Complexity Advantage**
+
+Compared to fully connected networks:
+
+$$
+O(n^2) \rightarrow O(k^2)
+$$
+
+Significant parameter reduction
+
+---
+
+## **11. One-Line Revision**
+
+CNN is a deep learning architecture that efficiently learns spatial hierarchies using convolution, parameter sharing, and local connectivity.
