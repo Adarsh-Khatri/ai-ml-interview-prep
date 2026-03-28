@@ -170,7 +170,8 @@ Y(i,j) = \sum_m \sum_n X(i+m, j+n) \cdot W(m,n)
 
 ## **5. Output Size Calculation**
 
-\frac{N - F + 2P}{S} + 1
+![equation](https://latex.codecogs.com/png.image?Y(i,j)=\sum_m\sum_nX(i+m,j+n)W(m,n))
+
 
 Where:
 
