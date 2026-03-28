@@ -120,7 +120,7 @@ Deep Learning is a type of machine learning that uses multi-layer neural network
 
 ## **1. Overview**
 
-A Convolutional Neural Network (CNN) is a deep learning architecture designed to process data with **grid-like structure** (e.g., images), using convolution operations to efficiently learn spatial hierarchies.
+A Convolutional Neural Network (CNN) is a deep learning architecture designed to process data with a **grid-like structure** (such as images). It uses convolution operations to learn spatial features efficiently.
 
 ---
 
@@ -128,57 +128,66 @@ A Convolutional Neural Network (CNN) is a deep learning architecture designed to
 
 ### **Problem with Fully Connected Layers**
 
-* For an image of size (224 \times 224 \times 3):
+* For an image of size 224 × 224 × 3:
 
-  * Parameters become extremely large
-  * No spatial structure is preserved
+  * Huge number of parameters
+  * No preservation of spatial structure
+  * High risk of overfitting
 
 ---
 
 ### **CNN Solution**
 
-* **Local Connectivity** → Focus on small regions
-* **Parameter Sharing** → Same filter reused
-* **Spatial Awareness** → Preserves image structure
+* **Local Connectivity** → Focuses on small regions
+* **Parameter Sharing** → Same filter used across image
+* **Spatial Awareness** → Preserves structure
 
 ---
 
-## **3. Mathematical Formulation**
+## **3. Convolution Operation**
 
-### **Convolution Operation**
+The core operation in CNN:
 
-Y(i,j) = \sum_m \sum_n X(i+m, j+n) \cdot W(m,n)
+```
+Y(i, j) = sum over m,n of X(i + m, j + n) * W(m, n)
+```
 
-* (X): Input
-* (W): Kernel (filter)
-* (Y): Output feature map
+Where:
+
+* X = Input image
+* W = Filter (kernel)
+* Y = Output feature map
 
 ---
 
 ## **4. Tensor Representation**
 
-* **Input:**
-  (X \in \mathbb{R}^{H \times W \times C})
+* **Input:** H × W × C
 
-* **Kernel:**
-  (W \in \mathbb{R}^{k \times k \times C})
+  * H = Height
+  * W = Width
+  * C = Channels (e.g., RGB = 3)
 
-* **Output:**
-  (Y \in \mathbb{R}^{H' \times W' \times F})
+* **Kernel:** k × k × C
+
+* **Output:** H' × W' × F
+
+  * F = Number of filters
 
 ---
 
-## **5. Output Size Calculation**
+## **5. Output Size Formula**
 
-![equation](https://latex.codecogs.com/png.image?Y(i,j)=\sum_m\sum_nX(i+m,j+n)W(m,n))
-
+```
+Output Size = (N - F + 2P) / S + 1
+```
 
 Where:
 
-* (N): Input size
-* (F): Filter size
-* (P): Padding
-* (S): Stride
+* N = Input size
+* F = Filter size
+* P = Padding
+* S = Stride
 
 ---
 
@@ -187,60 +196,102 @@ Where:
 ### **6.1 Convolution Layer**
 
 * Applies filters to extract features
-* Each filter detects specific patterns
+* Each filter detects patterns (edges, textures)
 
-$$
-Y_f = X * W_f + b_f
-$$
+```
+Y = X * W + b
+```
 
 ---
 
-### **6.2 Activation (ReLU)**
+### **6.2 Activation Function (ReLU)**
 
-f(x) = \max(0, x)
+```
+f(x) = max(0, x)
+```
 
 * Introduces non-linearity
-* Prevents linear model collapse
+* Removes negative values
 
 ---
 
 ### **6.3 Pooling Layer**
 
-* Reduces spatial dimensions
+* Reduces spatial size
 * Keeps important information
 
 **Max Pooling:**
 
-y = \max(x_{ij})
+```
+y = max(x_ij)
+```
 
 ---
 
 ### **6.4 Fully Connected Layer**
 
-* Flattens features
-* Performs classification
+* Flattens feature maps
+* Performs final classification
 
 ---
 
-## **7. Hierarchical Feature Learning**
+## **7. Key Design Principles**
 
-| Layer Depth | Features Learned   |
+### **7.1 Local Receptive Fields**
+
+* Each neuron sees only a small region
+
+---
+
+### **7.2 Parameter Sharing**
+
+* Same filter applied everywhere
+* Reduces number of parameters
+
+---
+
+### **7.3 Sparse Connectivity**
+
+* Not every neuron connects to all inputs
+
+---
+
+## **8. Receptive Field (Important Concept)**
+
+* The region of input affecting a neuron
+* Increases with depth
+
+👉 Deeper layers capture more global features
+
+---
+
+## **9. Hierarchical Feature Learning**
+
+| Layer Level | Features Learned   |
 | ----------- | ------------------ |
-| Shallow     | Edges, gradients   |
-| Mid-level   | Textures, patterns |
+| Early       | Edges, gradients   |
+| Middle      | Textures, patterns |
 | Deep        | Objects, semantics |
 
 ---
 
-## **8. Important Variants**
+## **10. Training Process**
+
+* Forward pass → Prediction
+* Loss calculation
+* Backpropagation → Gradient update
+
+---
+
+## **11. Important Variants**
 
 ### **Strided Convolution**
 
-* Downsampling via stride
+* Downsampling using stride
 
 ### **Dilated Convolution**
 
-* Larger receptive field without more parameters
+* Expands receptive field
 
 ### **Batch Normalization**
 
@@ -252,27 +303,34 @@ y = \max(x_{ij})
 
 ---
 
-## **9. Popular Architectures**
+## **12. Popular CNN Architectures**
 
 * **LeNet** → Early CNN
 * **AlexNet** → Breakthrough model
 * **VGG** → Deep architecture
-* **ResNet** → Skip connections (very important)
+* **ResNet** → Uses skip connections (very important)
 
 ---
 
-## **10. Complexity Advantage**
+## **13. Why CNN Works**
 
-Compared to fully connected networks:
+CNN leverages:
 
-$$
-O(n^2) \rightarrow O(k^2)
-$$
-
-Significant parameter reduction
+* Spatial locality
+* Translation invariance
+* Hierarchical learning
 
 ---
 
-## **11. One-Line Revision**
+## **14. Complexity Advantage**
 
-CNN is a deep learning architecture that efficiently learns spatial hierarchies using convolution, parameter sharing, and local connectivity.
+* Fully Connected: O(n²)
+* CNN: O(k²)
+
+👉 Much fewer parameters
+
+---
+
+## **15. One-Line Revision**
+
+CNN is a deep learning model that uses convolution, parameter sharing, and local connectivity to efficiently learn spatial features from images.
