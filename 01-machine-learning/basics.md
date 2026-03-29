@@ -431,3 +431,124 @@ A dataset typically consists of:
 
 ## **One-Line Revision**
 A dataset is a collection of input-output data used to train and evaluate a machine learning model.
+
+---
+---
+---
+
+
+# 6. What is Train, Validation, and Test Dataset?
+
+---
+
+## **In-Short**
+
+A dataset is split into three parts:
+
+* **Training Set** → used to train the model
+* **Validation Set** → used to tune hyperparameters and prevent overfitting
+* **Test Set** → used to evaluate final model performance
+
+The test set is never used during training.
+
+---
+
+## **Explanation**
+
+### **1. Training Dataset**
+
+**Definition:**
+The portion of data used to train the model.
+
+**What happens here:**
+
+* Model learns patterns
+* Weights are updated using backpropagation
+
+**Key Point:**
+This is the **only dataset the model learns from**
+
+---
+
+### **2. Validation Dataset**
+
+**Definition:**
+A separate dataset used during training to evaluate model performance and tune hyperparameters.
+
+**Used for:**
+
+* Hyperparameter tuning (learning rate, layers, etc.)
+* Model selection
+* Early stopping
+
+**Key Point:**
+Helps detect **overfitting**
+
+---
+
+### **3. Test Dataset**
+
+**Definition:**
+A completely unseen dataset used to evaluate the final performance of the trained model.
+
+**Used for:**
+
+* Final accuracy measurement
+* Real-world performance estimation
+
+**Key Point:**
+Never used during training or tuning
+
+---
+
+## **Workflow**
+
+```text id="workflow123"
+Training Data → Train Model  
+Validation Data → Tune Model  
+Test Data → Final Evaluation  
+```
+
+---
+
+## **When Each is Used**
+
+| Dataset    | When Used       | Purpose                    |
+| ---------- | --------------- | -------------------------- |
+| Train      | During training | Learn patterns             |
+| Validation | During training | Tune & prevent overfitting |
+| Test       | After training  | Final evaluation           |
+
+---
+
+## **Important Concepts**
+
+### **1. Overfitting Check**
+
+* If training accuracy is high but validation is low → overfitting
+
+---
+
+### **2. Data Leakage (Very Important)**
+
+* Never use test data during training
+* Otherwise results become unreliable
+
+---
+
+### **3. Typical Split Ratios**
+
+* 70% Train / 15% Validation / 15% Test
+* 80% Train / 10% Validation / 10% Test
+
+---
+
+## **Key Insight**
+
+Validation data helps us choose the best model, while test data tells us how well the model will perform in the real world.
+
+---
+
+## **One-Line Revision**
+
+Training data is used to learn, validation data is used to tune, and test data is used to evaluate the final model.
