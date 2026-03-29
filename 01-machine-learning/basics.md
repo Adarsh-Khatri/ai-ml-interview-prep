@@ -1,6 +1,19 @@
 # Machine Learning Basics
 
 ---
+
+## 🔗 Quick Navigation (Click to Jump)
+
+- [1. What is Machine Learning?](#1-what-is-machine-learning)
+- [2. What is Overfitting?](#2-what-is-overfitting)
+- [3. What is Underfitting?](#2-what-is-underfitting)
+- [4. Bias vs Variance and the Tradeoff?](#4-bias-vs-variance-and-the-tradeoff)
+- [5. What is a Dataset?](#5-what-is-a-dataset)
+- [6. What is Train, Validation, and Test Dataset?](#6-what-is-train-validation-and-test-dataset)
+
+---
+
+---
 ---
 ---
 

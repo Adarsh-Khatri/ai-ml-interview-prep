@@ -271,7 +271,7 @@ y = max(x_ij)
 * The region of input affecting a neuron
 * Increases with depth
 
-👉 Deeper layers capture more global features
+Deeper layers capture more global features
 
 ---
 
@@ -337,7 +337,7 @@ CNN leverages:
 * Fully Connected: O(n²)
 * CNN: O(k²)
 
-👉 Much fewer parameters
+Much fewer parameters
 
 ---
 
