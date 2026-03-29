@@ -1,6 +1,16 @@
 # Deep Learning Basics
 
 ---
+
+## 🔗 Quick Navigation (Click to Jump)
+
+- [1. What is Deep Learning?](#1-what-is-deep-learning)
+- [2. What is Convolutional Neural Network (CNN)?](#2-what-is-convolutional-neural-network-cnn)
+- [3. Why Do We Need Deep Learning?](#3-why-do-we-need-deep-learning)
+
+---
+
+---
 ---
 ---
 
