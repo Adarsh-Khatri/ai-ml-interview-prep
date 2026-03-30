@@ -50,6 +50,7 @@ y_t = W_y h_t + c
 $$
 
 ### Where:
+
 - \( x_t \): input at time step \( t \)  
 - \( h_t \): hidden state (current memory)  
 - \( h_{t-1} \): previous hidden state  
