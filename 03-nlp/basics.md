@@ -13,7 +13,7 @@
 ---
 
 
-# Recurrent Neural Network (RNN)
+# 1. What is RNN?
 
 ---
 
@@ -39,7 +39,7 @@ RNN introduces a **hidden state** that acts as memory and carries information ac
 
 ## Working Mechanism
 
-At each time step \( t \):
+At each time step $$ t $$:
 
 $$
 h_t = \tanh(W_x x_t + W_h h_{t-1} + b)
@@ -51,12 +51,12 @@ $$
 
 ### Where:
 
-- \( x_t \): input at time step \( t \)  
-- \( h_t \): hidden state (current memory)  
-- \( h_{t-1} \): previous hidden state  
-- \( y_t \): output  
-- \( W_x, W_h, W_y \): weight matrices  
-- \( b, c \): bias terms  
+- $$ x_t $$: input at time step $$ t $$  
+- $$ h_t $$: hidden state (current memory)  
+- $$ h_{t-1} $$: previous hidden state  
+- $$ y_t $$: output  
+- $$ W_x, W_h, W_y $$: weight matrices  
+- $$ b, c $$: bias terms  
 
 ---
 
