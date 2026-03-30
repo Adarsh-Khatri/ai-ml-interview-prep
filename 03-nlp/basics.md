@@ -51,12 +51,12 @@ $$
 
 ### Where:
 
-- $$ x_t $$: input at time step $$ t $$  
-- $$ h_t $$: hidden state (current memory)  
-- $$ h_{t-1} $$: previous hidden state  
-- $$ y_t $$: output  
-- $$ W_x, W_h, W_y $$: weight matrices  
-- $$ b, c $$: bias terms  
+- \( x_t \): input at time step \( t \)  
+- \( h_t \): hidden state (current memory)  
+- \( h_{t-1} \): previous hidden state  
+- \( y_t \): output  
+- \( W_x, W_h, W_y \): weight matrices  
+- \( b, c \): bias terms  
 
 ---
 
